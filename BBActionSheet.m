@@ -23,9 +23,14 @@
 }
 
 - (id)init {
+    return [self initWithTitle:nil];
+}
+
+- (id)initWithTitle:(NSString *)title {
     self = [super init];
     if (!self) return nil;
     
+    [self setTitle:title];
     [self setClickedHandlersByButtonIndex:[NSMutableDictionary dictionary]];
     [self setWillDismissHandlersByButtonIndex:[NSMutableDictionary dictionary]];
     [self setDidDismissHandlersByButtonIndex:[NSMutableDictionary dictionary]];
