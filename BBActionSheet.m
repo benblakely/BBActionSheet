@@ -59,10 +59,6 @@
     return [[self actionSheet] actionSheetStyle];
 }
 
-- (NSInteger)addButtonWithTitle:(NSString *)title {
-    return [self addButtonWithTitle:title clicked:nil willDismiss:nil didDismiss:nil];
-}
-
 - (NSInteger)addButtonWithTitle:(NSString *)title clicked:(void (^)())handler {
     return [self addButtonWithTitle:title clicked:handler willDismiss:nil didDismiss:nil];
 }
@@ -89,7 +85,7 @@
 }
 
 - (NSInteger)addCancelButtonWithTitle:(NSString *)title {
-    NSUInteger buttonIndex = [self addButtonWithTitle:title];
+    NSUInteger buttonIndex = [self addButtonWithTitle:title clicked:nil];
     [self setCancelButtonIndex:buttonIndex];
     return buttonIndex;
 }

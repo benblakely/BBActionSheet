@@ -17,7 +17,6 @@
 
 - (id)initWithTitle:(NSString *)title;
 
-- (NSInteger)addButtonWithTitle:(NSString *)title;
 - (NSInteger)addButtonWithTitle:(NSString *)title clicked:(void (^)())handler;
 - (NSInteger)addButtonWithTitle:(NSString *)title willDismiss:(void (^)())handler;
 - (NSInteger)addButtonWithTitle:(NSString *)title didDismiss:(void (^)())handler;
