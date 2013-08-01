@@ -24,6 +24,15 @@
                         clicked:(void (^)())clicked
                     willDismiss:(void (^)())willDismiss
                      didDismiss:(void (^)())didDismiss;
+
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title clicked:(void (^)())handler;
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title willDismiss:(void (^)())handler;
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title didDismiss:(void (^)())handler;
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title
+                                   clicked:(void (^)())clicked
+                               willDismiss:(void (^)())willDismiss
+                                didDismiss:(void (^)())didDismiss;
+
 - (NSInteger)addCancelButtonWithTitle:(NSString *)title;
 
 - (NSString*)buttonTitleAtIndex:(NSInteger)buttonIndex;

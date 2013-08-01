@@ -84,6 +84,27 @@
     return buttonIndex;
 }
 
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title clicked:(void (^)())handler {
+    return [self addDestructiveButtonWithTitle:title clicked:handler willDismiss:nil didDismiss:nil];
+}
+
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title willDismiss:(void (^)())handler {
+    return [self addDestructiveButtonWithTitle:title clicked:nil willDismiss:handler didDismiss:nil];
+}
+
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title didDismiss:(void (^)())handler {
+    return [self addDestructiveButtonWithTitle:title clicked:nil willDismiss:nil didDismiss:handler];
+}
+
+- (NSInteger)addDestructiveButtonWithTitle:(NSString *)title
+                                   clicked:(void (^)())clickedHandler
+                               willDismiss:(void (^)())willDismissHandler
+                                didDismiss:(void (^)())didDismissHandler {
+    NSInteger buttonIndex = [self addButtonWithTitle:title clicked:clickedHandler willDismiss:willDismissHandler didDismiss:didDismissHandler];
+    [self setDestructiveButtonIndex:buttonIndex];
+    return buttonIndex;
+}
+
 - (NSInteger)addCancelButtonWithTitle:(NSString *)title {
     NSUInteger buttonIndex = [self addButtonWithTitle:title clicked:nil];
     [self setCancelButtonIndex:buttonIndex];
