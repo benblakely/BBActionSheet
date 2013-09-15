@@ -30,11 +30,10 @@
     self = [super init];
     if (!self) return nil;
     
-    [self setTitle:title];
     [self setClickedHandlersByButtonIndex:[NSMutableDictionary dictionary]];
     [self setWillDismissHandlersByButtonIndex:[NSMutableDictionary dictionary]];
     [self setDidDismissHandlersByButtonIndex:[NSMutableDictionary dictionary]];
-    [self setActionSheet:[[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil]];
+    [self setActionSheet:[[UIActionSheet alloc] initWithTitle:title delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil]];
     
     return self;
 }
