@@ -5,7 +5,7 @@
 
 @interface BBActionSheet : NSObject
 
-@property (nonatomic) NSString *title;
+@property (nonatomic, copy) NSString *title;
 @property (nonatomic, readonly, getter=isVisible) BOOL visible;
 @property (nonatomic) UIActionSheetStyle actionSheetStyle;
 @property (nonatomic, readonly) NSInteger numberOfButtons;
