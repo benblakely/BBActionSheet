@@ -35,7 +35,7 @@
 
 - (NSInteger)addCancelButtonWithTitle:(NSString *)title;
 
-- (NSString*)buttonTitleAtIndex:(NSInteger)buttonIndex;
+- (NSString *)buttonTitleAtIndex:(NSInteger)buttonIndex;
 
 - (void)showFromTabBar:(UITabBar *)view;
 - (void)showFromToolbar:(UIToolbar *)view;
